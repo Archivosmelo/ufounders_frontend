@@ -1,0 +1,98 @@
+@import "src/styles/_variables.scss";
+
+.detailsContainer {
+    width: 660px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 10px 20px;
+
+    .header {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+
+        .modalTitle {
+            width: calc(100% - 50px);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            .imageContainer {
+                width: 60px;
+                margin-top: 5px;
+                svg {
+                    width: 100%;
+                }
+                &.present svg path {
+                    fill: $green;
+                }
+                svg path {
+                    fill: $red;
+                }
+            }
+            .username {
+                margin-left: 10px;
+                div {
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                }
+                span {
+                    font-weight: 300;
+                    color: $grey;
+                }
+            }
+        }
+    }
+
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .labelValue {
+            overflow-wrap: break-word;
+            font-size: 1rem;
+            padding: 25px 16px;
+            label {
+                font-size: 0.9rem;
+                margin-bottom: 6px;
+                display: block;
+                width: 100%;
+                color: $black;
+            }
+            div {
+                font-weight: 300;
+                color: $grey;
+            }
+        }
+
+        // Bootstrap or something
+        .w25 {
+            width: 25%;
+        }
+        .w30 {
+            width: 30%;
+        }
+        .w35 {
+            width: 35%;
+        }
+        .w40 {
+            width: 40%;
+        }
+        .w60 {
+            width: 60%;
+        }
+        .w65 {
+            width: 65%;
+        }
+        .w70 {
+            width: 70%;
+        }
+        .w100 {
+            width: 100%;
+        }
+    }
+}

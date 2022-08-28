@@ -1,0 +1,41 @@
+@import "src/styles/_variables.scss";
+
+.header {
+    height: $header-height;
+    margin-bottom: $header-margin-height;
+    overflow: hidden;
+
+    h1 {
+        margin: 0px;
+        color: $black;
+    }
+    h3 {
+        color: $grey;
+        margin: 10px 0px;
+        font-weight: normal;
+    }
+
+    .seedButton {
+        float: right;
+        button {
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            opacity: 0.6;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            div {
+                margin-left: 10px;
+            }
+        }
+    }
+}

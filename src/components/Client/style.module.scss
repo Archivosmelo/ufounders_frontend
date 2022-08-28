@@ -1,0 +1,106 @@
+@import "src/styles/_variables.scss";
+
+$right-with: 60px;
+
+.client {
+    height: 100px;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+        width: calc(100% - $right-with);
+        display: flex;
+        height: 100%;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .right {
+        width: $right-with;
+    }
+
+    .imageContainer {
+        width: 60px;
+
+        svg {
+            width: 100%;
+        }
+
+        &.present svg path {
+            fill: $green;
+        }
+
+        svg path {
+            fill: $red;
+        }
+    }
+
+    .userName {
+        width: calc(25% - 2px);
+        padding: 16px 30px;
+
+        div:first-child {
+            width: 100%;
+            color: $black;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        div:last-child {
+            width: 100%;
+            color: $grey;
+            font-weight: 300;
+        }
+    }
+
+    .ticketId {
+        width: calc(32% - 2px);
+        padding: 16px 30px;
+
+        div:first-child {
+            color: $black;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        div:last-child {
+            color: $grey;
+            font-weight: 300;
+        }
+    }
+
+    .ticketNumber {
+        width: calc(29% - 2px);
+        padding: 16px 30px;
+
+        div:first-child {
+            color: $black;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        div:last-child {
+            color: $grey;
+            font-weight: 300;
+        }
+    }
+
+    .actions {
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.2s ease;
+        border-radius: 10px;
+        &:hover {
+            background-color: $lightgrey;
+        }
+    }
+
+    .verticalDivisor {
+        height: 60%;
+        width: 1px;
+        background-color: lightgray;
+    }
+}

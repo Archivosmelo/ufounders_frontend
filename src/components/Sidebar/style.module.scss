@@ -1,0 +1,109 @@
+.transition {
+    transition: 0.2s ease;
+}
+
+.sidebar {
+    border-radius: 10px;
+    width: 60px;
+    height: 100%;
+    float: left;
+    left: 0px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
+    @extend .transition;
+
+    &:hover {
+        border-right: 1px solid lightgrey;
+    }
+
+    &.sidebar_opened {
+        width: 190px;
+    }
+
+    /* HAMBURGER MENU */
+    .menu {
+        width: 60px;
+        background-color: white;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+            filter: invert(1);
+        }
+    }
+
+    /* LOGO */
+    .logo {
+        img {
+            width: 45px;
+            margin-left: 10%;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+        &:hover {
+            filter: brightness(2) saturate(2);
+        }
+    }
+
+    /* NAV */
+    nav {
+        display: block;
+    }
+    ul {
+        list-style: none;
+        // top: 50%;
+        width: 100%;
+        padding: 0px;
+        // position: absolute;
+        // transform: translatey(-50%);
+        background-color: transparent;
+
+        li {
+            height: 60px;
+            width: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            background-color: white;
+            border-left: 5px solid transparent;
+            cursor: pointer;
+            opacity: 0.5;
+            @extend .transition;
+
+            &.active {
+                border-left: 5px solid black;
+                opacity: 1;
+            }
+
+            &:hover {
+                opacity: 1;
+                filter: invert(1);
+            }
+            div {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .logout {
+        width: 60px;
+        font-size: 1.5rem;
+        padding: 16px;
+        background-color: white;
+        border-radius: 10px;
+        border: none;
+        &:hover {
+            filter: invert(1);
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@import "src/styles/_variables.scss";
+
+.loginContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0px auto;
+    padding: 20px;
+    border-radius: 20px;
+
+    .inputForm {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+
+        label {
+            color: $grey;
+            cursor: pointer;
+        }
+
+        input {
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid $grey;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        button {
+            font-size: 1rem;
+            padding: 10px 90px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            transition: 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &:hover {
+                background-color: $black;
+                color: $white;
+            }
+        }
+    }
+}
+
+.toast-alert {
+    bottom: 18px;
+    right: 100px;
+
+    &.success {
+        background-color: $hardgreen !important;
+    }
+    &.error {
+        background-color: $red !important;
+    }
+}
