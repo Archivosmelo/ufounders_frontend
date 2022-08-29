@@ -15,10 +15,10 @@
         font-weight: normal;
     }
 
-    .seedButton {
+    .buttons {
         float: right;
         button {
-            padding: 16px;
+            padding: 10px 16px;
             display: flex;
             align-items: center;
             flex-wrap: wrap;
@@ -35,6 +35,51 @@
 
             div {
                 margin-left: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .header {
+        padding-top: 14px;
+        h1 {
+            font-size: 1.6rem;
+        }
+        h3 {
+            font-size: 1rem;
+        }
+        .buttons {
+            button {
+                padding: 5px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .header {
+        padding-top: 14px;
+        height: auto;
+        margin-bottom: 10px;
+        h1 {
+            font-size: 1.4rem;
+        }
+        h3 {
+            font-size: 1rem;
+        }
+        .buttons {
+            float: left;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px 0px;
+            button {
+                padding: 5px;
+                margin-right: 10px;
             }
         }
     }
