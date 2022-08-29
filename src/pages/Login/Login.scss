@@ -58,3 +58,22 @@
         background-color: $red !important;
     }
 }
+
+@media (max-width: $mobile-width) {
+    .Toastify__toast {
+        width: 90% !important;
+        left: 5% !important;
+        border-radius: 5px;
+    }
+    .toast-alert {
+        bottom: 18px;
+        right: 0px;
+
+        &.success {
+            background-color: $hardgreen !important;
+        }
+        &.error {
+            background-color: $red !important;
+        }
+    }
+}
