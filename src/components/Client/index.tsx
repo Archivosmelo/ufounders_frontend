@@ -23,16 +23,18 @@ const ClientComponent = ({ client }: Props) => {
 
             <div className={styles.client}>
 
-                <div className={styles.left}>
-
-                    {/* Ticket image */}
-                    <div className={`${styles.imageContainer} ${client.present ? styles.present : ''}`}>
-                        <Icons type={7} />
-                    </div>
-
+                {/* Ticket image */}
+                <div className={`${styles.imageContainer} ${client.present ? styles.present : ''}`}>
+                    <Icons type={7} />
+                </div>
+                
+                <div className={styles.infoContainer}>
                     {/* User name */}
                     <div className={styles.userName}>
                         <div>
+                            <div className={`${styles.imageUsername} ${client.present ? styles.present : ''}`}>
+                                <Icons type={7} />
+                            </div>
                             {`${client.firstName} ${client.lastName}`}
                         </div>
                         <div>
@@ -58,16 +60,12 @@ const ClientComponent = ({ client }: Props) => {
                         <div>{client.ticket}</div>
                     </div>
                 </div>
-
-
-                <div className={styles.right}>
-                    <div
-                        className={styles.actions}
-                        onClick={() => { requestDetails(client._id) }}>
-                        <AiOutlineEllipsis style={{ fontSize: '2rem' }} />
-                    </div>
+            
+                <div
+                    className={styles.actions}
+                    onClick={() => { requestDetails(client._id) }}>
+                    <AiOutlineEllipsis style={{ fontSize: '2rem' }} />
                 </div>
-
             </div>
 
         </>
