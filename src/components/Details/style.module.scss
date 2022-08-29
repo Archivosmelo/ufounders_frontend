@@ -96,3 +96,13 @@
         }
     }
 }
+
+@media (max-width: $mobile-width) {
+    .detailsContainer {
+        width: 90vw;
+        overflow-y: scroll;
+    }
+    .info {
+        flex-direction: column;
+    }
+}
