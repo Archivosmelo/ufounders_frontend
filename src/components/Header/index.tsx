@@ -52,7 +52,7 @@ const Header = () => {
 
                     Bienvenido de nuevo, {username}. 👋
 
-                    <div className={styles.seedButton}>
+                    <div className={styles.buttons}>
 
                         <button onClick={handleSeed}>
                             <BiCloudUpload />

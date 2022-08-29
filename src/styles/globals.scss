@@ -33,3 +33,19 @@ body {
         }
     }
 }
+
+@media (max-width: $tablet-width) {
+    .page {
+        main {
+            padding: 10px 20px;
+        }
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .page {
+        main {
+            padding: 10px 20px;
+        }
+    }
+}
