@@ -35,3 +35,17 @@
         }
     }
 }
+
+@media (max-width: $mobile-width) {
+    .modalOverlay {
+        overflow-y: scroll;
+        &.visible {
+            .modal {
+                position: absolute;
+                left: 50%;
+                top: 0%;
+                transform: translate(-50%, 16px);
+            }
+        }
+    }
+}
